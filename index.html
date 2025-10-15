@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For My Love 💖</title>
-<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 
 <div class="frame">
   <div class="slides" id="slides">
 
     <!-- Slide 1: Welcome -->
     <section class="slide">
-      <img src="welcome slide gif.gif" class="gif">
+      <img src="welcome slide gif.gif" class="slide-gif">
       <h1>Hello My Love 💖</h1>
       <p>Welcome to a little surprise made just for you.</p>
       <div class="controls">
@@ -23,9 +22,9 @@
       </div>
     </section>
 
-    <!-- Slide 2: Flowers -->
+    <!-- Slide 2: Flower Bouquet -->
     <section class="slide">
-      <img src="flower boquet.gif" class="gif">
+      <img src="flower boquet.gif" class="slide-gif">
       <h2>Flowers for my baby 🌸</h2>
       <p>These flowers carry all my love for you.</p>
       <div class="controls">
@@ -34,12 +33,12 @@
       </div>
     </section>
 
-    <!-- Slide 3: Gift box message -->
+    <!-- Slide 3: Message -->
     <section class="slide">
-      <img src="messege slide gif.gif" class="gif">
+      <img src="messege slide gif.gif" class="slide-gif">
       <h2>For My Love 💌</h2>
       <p id="msg"></p>
-      <button class="btn" onclick="typeMessage()">Open Gift 🎁</button>
+      <button class="btn" onclick="typeMessage()">Read Message</button>
       <div class="controls">
         <button class="btn" onclick="prevSlide()">◀ Back</button>
         <button class="btn" onclick="nextSlide()">Next ▶</button>
@@ -48,10 +47,10 @@
 
     <!-- Slide 4: Dedicated Song -->
     <section class="slide">
-      <img src="dedicated song slide gif.gif" class="gif">
+      <img src="dedicated song slide gif.gif" class="slide-gif">
       <h2>Song Dedicated to You 🎶</h2>
-      <p>Click below to play the song.</p>
-      <audio id="dedicatedSong" src="song.mp3" controls></audio>
+      <p>Tap Play to listen.</p>
+      <audio id="dedicatedAudio" controls src="song.mp3"></audio>
       <div class="controls">
         <button class="btn" onclick="prevSlide()">◀ Back</button>
         <button class="btn" onclick="nextSlide()">Next ▶</button>
@@ -60,9 +59,11 @@
 
     <!-- Slide 5: Party -->
     <section class="slide">
-      <img src="party gif.gif" class="gif">
-      <h2>Let’s Celebrate 🎉</h2>
-      <audio id="partySong" src="party song.mp3" autoplay></audio>
+      <img src="party gif.gif" class="slide-gif">
+      <h2>Let’s party 🎉</h2>
+      <p>Tap Start Party to play music & confetti.</p>
+      <button class="btn" onclick="startParty()">Start Party 🎂🎈</button>
+      <canvas id="confetti"></canvas>
       <div class="controls">
         <button class="btn" onclick="prevSlide()">◀ Back</button>
         <button class="btn" onclick="nextSlide()">Next ▶</button>
@@ -71,7 +72,7 @@
 
     <!-- Slide 6: Kisses -->
     <section class="slide">
-      <img src="kissing gif.gif" class="gif">
+      <img src="kissing gif.gif" class="slide-gif">
       <h2>Kisses for you 😘</h2>
       <p>All my kisses flying your way.</p>
       <div class="controls">
@@ -82,7 +83,7 @@
 
     <!-- Slide 7: Hug -->
     <section class="slide">
-      <img src="hug gif.gif" class="gif">
+      <img src="hug gif.gif" class="slide-gif">
       <h2>A Tight Hug 🤗</h2>
       <p>My warm hug just for you, my love.</p>
       <div class="controls">
@@ -91,10 +92,10 @@
       </div>
     </section>
 
-    <!-- Slide 8: Noob Warning -->
+    <!-- Slide 8: Noob -->
     <section class="slide">
-      <img src="noob slide gif.gif" class="gif">
-      <h2>Warning 😤</h2>
+      <img src="noob slide gif.gif" class="slide-gif">
+      <h2>Noob bola toh... 😤</h2>
       <p id="noobMsg"></p>
       <div class="controls">
         <button class="btn" onclick="prevSlide()">◀ Back</button>
@@ -102,11 +103,11 @@
       </div>
     </section>
 
-    <!-- Slide 9: Final -->
+    <!-- Slide 9: I Miss You -->
     <section class="slide">
-      <img src="i miss you slide gif.gif" class="gif">
+      <img src="i miss you slide gif.gif" class="slide-gif">
       <h2>I love you my Nikki baby 💞</h2>
-      <p>I miss you jaanaaa, pls come back soon...<br>aur aate waqt mere liye chips lana 😚💞</p>
+      <p id="finalMsg">I miss you jaanaaa,<br>jaldi se mujhe milne aao.<br>Or aate waqt mere liye kinderjoy lana 😚</p>
       <div class="controls">
         <button class="btn" onclick="prevSlide()">◀ Back</button>
         <button class="btn" onclick="index=0; showSlide();">Start Over 🔄</button>
@@ -115,6 +116,8 @@
 
   </div>
 </div>
+
+<audio id="partyAudio" src="party song.mp3"></audio>
 
 <script src="script.js"></script>
 </body>
